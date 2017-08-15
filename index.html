@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Салон красоты Sogdiana</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.1.7.1.min.js">
+	</script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				// Фикмированная шапка при скролле
+				$("#header").removeClass("default");
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 20) {
+						$("#header").addClass("default").fadeIn('fast');
+					} else {
+						$("#header").removeClass("default").fadeIn('fast');
+					};
+				});
+				// Плавный скролл по якорям
+				$('a[href^="#"]').click(function () { 
+				    elementClick = $(this).attr("href");
+					destination = $(elementClick).offset().top;
+					if($.browser.safari){
+					$('body').animate( { scrollTop: destination }, 1000 );
+					} else {
+				    	$('html').animate( { scrollTop: destination }, 1000 );
+					}
+					return false;
+			   });
+			});
+	</script>
+</head>
+
+
+<body>
+	<header>
+		<div class="container">
+			<img class="logo" src="img/logo.png" alt="Sogdiana">
+		</div>	
+		<h1>
+			Уход и забота о Вашей красоте
+		</h1>
+		<p class="intro">
+			Получите  профессиональные услуги
+ 			от лучших специалистов Астаны 
+			с гарантией качества
+		</p>
+		<a href="#order" class="act">
+			Записаться
+		</a>
+	</header>
+
+	<section id="services">
+		<div class="container">
+			<h2>
+				наши услуги
+			</h2>
+			<div class="services">
+				<div class="item">
+					<img src="img/foto1.png" alt="Парикмахерские услуги">
+					<h3>
+						Парикмахерские услуги
+					</h3>
+				</div>
+				<div class="item">
+					<img src="img/foto2.png" alt="Маникюр педикюр">
+					<h3>
+						Маникюр педикюр
+					</h3>
+				</div>
+				<div class="item">
+					<img src="img/foto3.png" alt="Депиляция">
+					<h3>
+						Депиляция
+					</h3>
+				</div>
+<!-- 				<div class="item">
+					<img src="img/foto4.png" alt="Косметология">
+					<h3>
+						Косметология
+					</h3>
+				</div>
+				<div class="item">
+					<img src="img/foto5.png" alt="Макияж">
+					<h3>
+						Макияж
+					</h3>
+				</div> -->
+			</div>	
+			<div class="services">
+ 				<div class="item">
+					<img src="img/foto4.png" alt="Косметология">
+					<h3>
+						Косметология
+					</h3>
+				</div>
+				<div class="item">
+					<img src="img/foto5.png" alt="Макияж">
+					<h3>
+						Макияж
+					</h3>
+				</div>				
+			</div>	
+		</div>
+	</section>
+
+	
+
+	<section id="whynot">
+		<div class="container">
+			<h2>
+				почему стоит выбрать нас
+			</h2>
+
+			<div class="services_ico">
+				<div class="itemw">
+					<img src="img/ico1.png" alt="Почему стоит выбрать нас">
+				</div>
+				<div class="itemw">
+					<img src="img/ico2.png" alt="Гарантия">
+				</div>
+				<div class="itemw">
+					<img src="img/ico3.png" alt="Выезд мастера">
+				</div>
+			</div>
+
+			<div class="services">
+				<div class="itemw">
+					<!-- <img src="img/ico1.png" alt="Почему стоит выбрать нас"> -->
+					<h3>
+						индивидуальный подход
+					</h3>
+					<p>
+						Индивидуальный подход к каждому клиенту. Бесплатная консультация мастера
+					</p>
+				</div>
+				<div class="itemw">
+					<!-- <img src="img/ico2.png" alt="Гарантия"> -->
+					<h3>
+						гарантия
+					</h3>
+					<p>
+						Гарантия высокого качества работы опытных мастеров за максимально короткое время
+					</p>
+				</div>
+				<div class="itemw">
+					<!-- <img src="img/ico3.png" alt="Выезд мастера"> -->
+					<h3>
+						выезд мастера
+					</h3>
+					<p>
+						Выезд универсального мастера для невест на дом. Профессиональный макияж и свадебная укладка
+					</p>
+				</div>
+			</div>					
+		</div>
+	</section>
+
+
+
+
+	<section id="order">
+		<div class="container">
+			<h2>
+				оставить контакты
+			</h2>
+			<form action="#" class="form">
+				<input type="text" name="name" placeholder="Имя" class="input">
+			</form>	
+			<form action="#" class="form">
+				<input type="email" name="email" placeholder="Email" class="input">
+			</form>	
+			<form action="#" class="form">
+				<input type="tel" name="phone" placeholder="Телефон" class="input">
+			</form>	
+			<button class="act submit" type="submit">
+				записаться
+			</button>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="credits">
+				2017 / Все права защищены
+			</div>
+		</div>
+	</footer>
+
+
+
+
+</body>
+
+
+
+</html>
